@@ -2,10 +2,25 @@ package minicraft.level;
 
 import minicraft.core.io.Settings;
 import minicraft.gfx.Point;
+
+import minicraft.level.biome.Biome;
+import minicraft.level.biome.Biomes;
+import minicraft.level.noise.LevelNoise;
+
+import minicraft.core.Game;
+
 import minicraft.level.tile.Tiles;
 import minicraft.util.Simplex;
 import org.tinylog.Logger;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -626,18 +641,6 @@ public class LevelGen {
                 chunkManager.setChunkStage(x, y, ChunkManager.CHUNK_STAGE_UNFINISHED_STAIRS);
                 break;
         }
-    }
-
-    static ChunkManager createAndValidateMap(int w, int h, int level, long seed) {
-        ChunkManager cm = new ChunkManager();
-        for (int i = 0; i < w / ChunkManager.CHUNK_SIZE; i++) {
-            for (int j = 0; j < h / ChunkManager.CHUNK_SIZE; j++) {
-                for (int k = ChunkManager.CHUNK_STAGE_NONE; k < ChunkManager.CHUNK_STAGE_UNFINISHED_STAIRS; k++) {
-                    advanceChunk(cm, i, j, level, seed);
-                }
-            }
-        }
-        return cm;
     }
 
     public static void main(String[] args) {
