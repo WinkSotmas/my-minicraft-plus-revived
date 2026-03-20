@@ -2,10 +2,25 @@ package minicraft.level;
 
 import minicraft.core.io.Settings;
 import minicraft.gfx.Point;
+
+import minicraft.level.biome.Biome;
+import minicraft.level.biome.Biomes;
+import minicraft.level.noise.LevelNoise;
+
+import minicraft.core.Game;
+
 import minicraft.level.tile.Tiles;
 import minicraft.util.Simplex;
 import org.tinylog.Logger;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
