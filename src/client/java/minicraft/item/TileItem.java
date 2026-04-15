@@ -65,10 +65,11 @@ public class TileItem extends StackableItem {
 			AchievementsDisplay.setAchievement("minicraft.achievement.plant_seed", true);
 			return TileModel.KEEP_DATA.getTileData(model1, target, level, xt, yt, player, attackDir);
 		};
-		items.add(new TileItem("Wheat Seeds", new LinkedSprite(SpriteType.Item, "seed"), new TileModel("wheat", seedPlanting), "farmland"));
-		items.add(new TileItem("Potato", new LinkedSprite(SpriteType.Item, "potato"), new TileModel("potato", TileModel.KEEP_DATA), "farmland"));
-		items.add(new TileItem("Carrot", new LinkedSprite(SpriteType.Item, "carrot"), new TileModel("carrot", TileModel.KEEP_DATA), "farmland"));
-		items.add(new TileItem("Tomato Seeds", new LinkedSprite(SpriteType.Item, "seed"), new TileModel("tomato", seedPlanting), "farmland"));
+		items.add(new TileItem("Wheat Seeds", new LinkedSprite(SpriteType.Item, "seed"), new TileModel("WHEAT", seedPlanting), "farmland"));
+		items.add(new TileItem("Potato", new LinkedSprite(SpriteType.Item, "potato"), new TileModel("POTATO", TileModel.KEEP_DATA), "farmland"));
+		items.add(new TileItem("Sugar Cane", new LinkedSprite(SpriteType.Item, "sugar_cane"), new TileModel("Sugar Cane", TileModel.KEEP_DATA), "farmland"));
+		items.add(new TileItem("Carrot", new LinkedSprite(SpriteType.Item, "carrot"), new TileModel("CARROT", TileModel.KEEP_DATA), "farmland"));
+		items.add(new TileItem("Tomato Seeds", new LinkedSprite(SpriteType.Item, "seed"), new TileModel("TOMATO", seedPlanting), "farmland"));
 		items.add(new TileItem("Heavenly Berries", new LinkedSprite(SpriteType.Item, "heavenly_berries"), new TileModel("heavenly berries", TileModel.KEEP_DATA), "farmland"));
 		items.add(new TileItem("Hellish Berries", new LinkedSprite(SpriteType.Item, "hellish_berries"), new TileModel("hellish berries", TileModel.KEEP_DATA), "farmland"));
 		items.add(new TileItem("Grass Seeds", new LinkedSprite(SpriteType.Item, "seed"), new TileModel("grass"), "dirt"));

@@ -9,6 +9,7 @@ import minicraft.level.tile.farming.HellishBerriesTile;
 import minicraft.level.tile.farming.PotatoTile;
 import minicraft.level.tile.farming.TomatoTile;
 import minicraft.level.tile.farming.WheatTile;
+import minicraft.level.tile.farming.SugarCaneTile;
 import minicraft.util.Logging;
 
 import java.util.ArrayList;
@@ -109,6 +110,8 @@ public final class Tiles {
 		tiles.put((short) 57, new TorchTile());
 		tiles.put((short) 58, new SignTile());
 		tiles.put((short) 59, new DecorTile(DecorTile.decorType.ORNATE_WOOD));
+		tiles.put((short) 60, new SugarCaneTile("Sugar Cane"));
+
 
 		// WARNING: don't use this tile for anything!
 		tiles.put((short) 255, new ConnectTile());

@@ -2454,6 +2454,14 @@
     }},
     "rewards": {"recipes": {"Bread_1": ["Wheat_4"]}}
   },
+  "minicraft.advancements.recipes.sugar": {
+    "requirements": [["has_sugar_cane"]],
+    "criteria": {"has_sugar_canet": {
+      "trigger": "inventory_changed",
+      "conditions": {"items": [{"items": ["Sugar Cane"]}]}
+    }},
+    "rewards": {"recipes": {"Sugar_2": ["Sugar Cane_1"]}}
+  },
   "minicraft.advancements.recipes.anvil": {
     "requirements": [["has_iron"]],
     "criteria": {"has_iron": {

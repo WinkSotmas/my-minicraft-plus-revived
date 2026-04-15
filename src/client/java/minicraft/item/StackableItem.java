@@ -19,6 +19,7 @@ public class StackableItem extends Item {
 		items.add(new StackableItem("Wood", new LinkedSprite(SpriteType.Item, "wood")));
 		items.add(new StackableItem("Leather", new LinkedSprite(SpriteType.Item, "leather")));
 		items.add(new StackableItem("Wheat", new LinkedSprite(SpriteType.Item, "wheat")));
+		items.add(new StackableItem("Sugar", new LinkedSprite(SpriteType.Item, "sugar")));
 		items.add(new StackableItem("Key", new LinkedSprite(SpriteType.Item, "key")));
 		items.add(new StackableItem("Arrow", new LinkedSprite(SpriteType.Item, "arrow")));
 		items.add(new StackableItem("String", new LinkedSprite(SpriteType.Item, "string")));

@@ -12,3 +12,4 @@
 3,string
 6,cloth
 :steak,2:wood,7
+6,Sugar Cane,2

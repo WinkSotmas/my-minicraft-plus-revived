@@ -89,6 +89,8 @@ public class Recipes {
 		workbenchRecipes.add(new Recipe("Gold Fishing Rod_1", "Gold_10", "String_3"));
 		workbenchRecipes.add(new Recipe("Gem Fishing Rod_1", "Gem_10", "String_3"));
 
+		workbenchRecipes.add(new Recipe("Sugar_2", "Sugar Cane_1"));
+
 		workbenchRecipes.add(new Recipe("Wood Sword_1", "Wood_5"));
 		workbenchRecipes.add(new Recipe("Wood Axe_1", "Wood_5"));
 		workbenchRecipes.add(new Recipe("Wood Hoe_1", "Wood_5"));
