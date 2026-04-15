@@ -7,6 +7,7 @@ import minicraft.core.io.InputHandler;
 import minicraft.core.io.Settings;
 import minicraft.core.io.Sound;
 import minicraft.entity.Arrow;
+import minicraft.entity.StoneProjectile;
 import minicraft.entity.ClientTickable;
 import minicraft.entity.Direction;
 import minicraft.entity.Entity;
@@ -766,6 +767,22 @@ public class Player extends Mob implements ItemHolder, ClientTickable {
 
 					AchievementsDisplay.setAchievement("minicraft.achievement.bow", true);
 
+					return;
+				}
+			}
+
+			// Throw a pebble if we have one. Pebbles do less damage than arrows.
+			if (activeItem instanceof StackableItem && activeItem.getName().equals("Pebble") && stamina > 0) {
+				StackableItem pebbleStack = (StackableItem) activeItem;
+				if (pebbleStack.count > 0) {
+					pebbleStack.count--;
+					if (pebbleStack.count <= 0) {
+						activeItem = null;
+					}
+					int pebbleDamage = 1; // Base damage for pebbles (less than arrow level 1 which is 3)
+					level.add(new StoneProjectile(this, attackDir, pebbleDamage));
+					attackTime = 10;
+					stamina--;
 					return;
 				}
 			}

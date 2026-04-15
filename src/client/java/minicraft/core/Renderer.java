@@ -250,6 +250,18 @@ public class Renderer extends Game {
 			}
 		}
 
+		// This checks if the player is holding a pebble, and shows the pebble counter accordingly.
+		if (player.activeItem != null && player.activeItem.getName().equals("Pebble")) {
+			int pc = player.getInventory().count(Items.pebbleItem);
+			// "^" is an infinite symbol.
+			if (isMode("minicraft.settings.mode.creative") || pc >= 10000)
+				Font.drawBackground("	x" + "^", screen, 84, Screen.h - 16);
+			else
+				Font.drawBackground("	x" + pc, screen, 84, Screen.h - 16);
+			// Displays the stone/pebble icon (reusing arrow sprite)
+			screen.render(10 * 8 + 4, Screen.h - 16, 4, 1, 0, hudSheet.getSheet());
+		}
+
 		ArrayList<String> permStatus = new ArrayList<>();
 		if (Updater.saving)
 			permStatus.add(Localization.getLocalized("minicraft.display.gui.perm_status.saving", Math.round(LoadingDisplay.getPercentage())));

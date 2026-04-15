@@ -41,6 +41,7 @@ public class StackableItem extends Item {
 		items.add(new StackableItem("Tomato", new LinkedSprite(SpriteType.Item, "tomato")));
 		items.add(new StackableItem("Bone", new LinkedSprite(SpriteType.Item, "bone")));
 		items.add(new StackableItem("Fertilizer", new SpriteLinker.LinkedSprite(SpriteLinker.SpriteType.Item, "fertilizer")));
+		items.add(new StackableItem("Pebble", new LinkedSprite(SpriteType.Item, "stone")));
 
 		return items;
 	}

@@ -158,6 +158,14 @@
     }},
     "rewards": {"recipes": {"Plank_2": ["Wood_1"]}}
   },
+  "minicraft.advancements.recipes.pebble": {
+    "requirements": [["has_stone"]],
+    "criteria": {"has_stone": {
+      "trigger": "inventory_changed",
+      "conditions": {"items": [{"items": ["Stone"]}]}
+    }},
+    "rewards": {"recipes": {"Pebble_4": ["Stone_1"]}}
+  },
   "minicraft.advancements.recipes.red_bed_from_white_bed": {
     "requirements": [[
       "has_red_dye",

@@ -13,18 +13,18 @@ import javax.security.auth.DestroyFailedException;
 
 import java.util.List;
 
-public class Arrow extends Entity implements ClientTickable {
+public class StoneProjectile extends Entity implements ClientTickable {
 	private Direction dir;
 	private int damage;
 	public Mob owner;
 	private int speed;
-	private LinkedSprite sprite = new LinkedSprite(SpriteType.Entity, "arrow").setSpriteSize(1, 1);
+	private LinkedSprite sprite = new LinkedSprite(SpriteType.Entity, "stone_projectile").setSpriteSize(1, 1);
 
-	public Arrow(Mob owner, Direction dir, int dmg) {
+	public StoneProjectile(Mob owner, Direction dir, int dmg) {
 		this(owner, owner.x, owner.y, dir, dmg);
 	}
 
-	public Arrow(Mob owner, int x, int y, Direction dir, int dmg) {
+	public StoneProjectile(Mob owner, int x, int y, Direction dir, int dmg) {
 		super(Math.abs(dir.getX()) + 1, Math.abs(dir.getY()) + 1);
 		this.owner = owner;
 		this.x = x;
@@ -32,7 +32,7 @@ public class Arrow extends Entity implements ClientTickable {
 		this.dir = dir;
 
 		damage = dmg;
-		col = Color.get(-1, 111, 222, 430);
+		col = Color.get(-1, 111, 111, 111);
 
 		int xt = 0;
 		if (dir == Direction.LEFT) xt = 1;
@@ -46,7 +46,7 @@ public class Arrow extends Entity implements ClientTickable {
 	}
 
 	/**
-	 * Generates information about the arrow.
+	 * Generates information about the stone projectile.
 	 * @return string representation of owner, xdir, ydir and damage.
 	 */
 	public String getData() {
@@ -71,14 +71,14 @@ public class Arrow extends Entity implements ClientTickable {
 		for (Entity hit : entitylist) {
 			if (hit instanceof Mob && hit != owner) {
 				Mob mob = (Mob) hit;
-				damage += (hit instanceof Player ? 0 : 3) + (criticalHit ? 0 : 1); // Extra damage bonus.
+				damage += (hit instanceof Player ? 0 : 2) + (criticalHit ? 0 : 1); // Extra damage bonus (less than arrows).
 				damage = mob.calculateEntityDamage(this, damage);
 				mob.hurt(owner, damage, dir); //normal hurting to other mobs
 				hitEntity = true;
 			}
 		}
 
-		// Remove arrow after hitting an entity
+		// Remove projectile after hitting an entity
 		if (hitEntity) {
 			this.remove();
 			try {

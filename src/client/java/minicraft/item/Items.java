@@ -122,6 +122,7 @@ public class Items {
 	}
 
 	public static Item arrowItem = get("arrow");
+	public static Item pebbleItem = get("pebble");
 
 	public static int getCount(Item item) {
 		if (item instanceof StackableItem) {
