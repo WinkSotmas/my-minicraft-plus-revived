@@ -2464,7 +2464,7 @@
   },
   "minicraft.advancements.recipes.sugar": {
     "requirements": [["has_sugar_cane"]],
-    "criteria": {"has_sugar_canet": {
+    "criteria": {"has_sugar_cane": {
       "trigger": "inventory_changed",
       "conditions": {"items": [{"items": ["Sugar Cane"]}]}
     }},
