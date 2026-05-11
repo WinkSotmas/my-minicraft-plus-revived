@@ -11,6 +11,7 @@ import minicraft.entity.furniture.DungeonChest;
 import minicraft.entity.furniture.Lantern;
 import minicraft.entity.furniture.Spawner;
 import minicraft.entity.mob.AirWizard;
+import minicraft.entity.mob.Chicken;
 import minicraft.entity.mob.Cow;
 import minicraft.entity.mob.Creeper;
 import minicraft.entity.mob.EnemyMob;
@@ -763,8 +764,9 @@ public class Level {
 
 				if (depth == 0 && PassiveMob.checkStartPos(this, nx, ny)) {
 					// Spawns the friendly mobs.
-					if (rnd <= (Updater.getTime() == Updater.Time.Night ? 22 : 33)) add((new Cow()), nx, ny);
-					else if (rnd >= 68) add((new Pig()), nx, ny);
+					if (rnd <= (Updater.getTime() == Updater.Time.Night ? 20 : 30)) add((new Cow()), nx, ny);
+					else if (rnd >= 70) add((new Pig()), nx, ny);
+					else if (rnd < 45) add((new Chicken()), nx, ny);
 					else { // Sheep spawning
 						double colorRnd = random.nextDouble();
 						if (colorRnd < 0.8) { // 80% for default color, i.e. white

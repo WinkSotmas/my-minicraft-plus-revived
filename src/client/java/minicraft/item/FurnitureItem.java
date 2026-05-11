@@ -12,6 +12,7 @@ import minicraft.entity.furniture.Furniture;
 import minicraft.entity.furniture.Lantern;
 import minicraft.entity.furniture.Spawner;
 import minicraft.entity.furniture.Tnt;
+import minicraft.entity.mob.Chicken;
 import minicraft.entity.mob.Cow;
 import minicraft.entity.mob.Creeper;
 import minicraft.entity.mob.Knight;
@@ -36,6 +37,7 @@ public class FurnitureItem extends Item {
 		/// There should be a spawner for each level of mob, or at least make the level able to be changed.
 		items.add(new FurnitureItem(new Spawner(new Cow())));
 		items.add(new FurnitureItem(new Spawner(new Pig())));
+		items.add(new FurnitureItem(new Spawner(new Chicken())));
 		items.add(new FurnitureItem(new Spawner(new Sheep())));
 		items.add(new FurnitureItem(new Spawner(new Slime(1))));
 		items.add(new FurnitureItem(new Spawner(new Zombie(1))));

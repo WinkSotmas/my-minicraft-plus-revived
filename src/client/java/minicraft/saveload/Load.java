@@ -22,6 +22,7 @@ import minicraft.entity.furniture.Lantern;
 import minicraft.entity.furniture.Spawner;
 import minicraft.entity.furniture.Tnt;
 import minicraft.entity.mob.AirWizard;
+import minicraft.entity.mob.Chicken;
 import minicraft.entity.mob.Cow;
 import minicraft.entity.mob.Creeper;
 import minicraft.entity.mob.EnemyMob;
@@ -1536,6 +1537,8 @@ public class Load {
 				return null;
 			case "Cow":
 				return new Cow();
+			case "Chicken":
+				return new Chicken();
 			case "Sheep":
 				return new Sheep();
 			case "Pig":
